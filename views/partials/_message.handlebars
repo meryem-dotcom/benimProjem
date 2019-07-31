@@ -1,0 +1,13 @@
+<div id="myMessage" style="transition: 5s;" class="entry">
+  {{#if message}}
+  <div class="alert alert-success mt-1" role="alert" style="text-align: center;">
+    {{message}}
+</div>
+  {{/if}}
+</div>
+
+<script type="text/javascript">
+setTimeout(function(){
+  document.getElementById('myMessage').style.display="none";
+   }, 3000);
+</script>
