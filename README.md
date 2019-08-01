@@ -1,2 +1,2 @@
 # benimProjem
-bu proje tamamen kafadan yapılır hiç bir amaç için değildir...
+npm install nodemailer nodemon express express-handlebars mongoose
