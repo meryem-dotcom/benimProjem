@@ -8,6 +8,8 @@ let userRouter = require('./routers/userrouter');
 let homeRouter = require('./routers/homerouter');
 let okuRouter = require('./routers/okurouter');
 let registerRouter = require('./routers/registerrouter');
+let mailRouter = require('./routers/mailrouter');
+let hakkimdaRouter = require('./routers/hakkimdarouter');
 
 const config = require('./config');
 const app = express();
@@ -33,6 +35,14 @@ app.use('/login',loginRouter);
 app.use('/register',registerRouter);
 
 app.use('/',homeRouter);
+
+app.use('/mailyaz',mailRouter);
+
+app.use('/hakkimda',hakkimdaRouter);
+
+app.use((req,res)=>{
+  res.send('sayfa yok');
+});
 
 app.listen(5421,()=>{
   console.log('localhost:5421');
