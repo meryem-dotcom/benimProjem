@@ -60,7 +60,7 @@ KullaniciModel.findOne({kullaniciad:req.body.kullaniciad,sifre: req.body.sifre},
         message: 'Login ollllll'
 
       }
-      return res.render('home',pageMessage);
+      return res.redirect('/',200,pageMessage);
 
 
 });
